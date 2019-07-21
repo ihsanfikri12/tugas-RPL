@@ -9,7 +9,7 @@ const router = new express.Router()
 router.get('/barang2', async(req,res)=>{
     try{
         const barang = await Barang.find({})
-        console.log(req.user)
+
         const terimaBarang = []
         // const buffer = Buffer.from(barang.avatar).toString('base64')
         barang.forEach((barang)=>{
