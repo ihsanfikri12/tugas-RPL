@@ -1,0 +1,40 @@
+<% include ./partials/header %> 
+
+	<!-- Page info -->
+	<div class="page-top-info">
+		<div class="container">
+			<h4>transaksi barang yang kamu jual</h4>
+		</div>
+	</div>
+	<!-- Page info end -->
+
+
+	<!-- Category section -->
+				<div class="container">
+				<div class="col-lg-9  order-1 order-lg-2 mb-5 ml-5 mb-lg-0">
+					<div class="row">
+						<%for(let i = 0; i<angka; i++) { %>
+						<div class="col-lg-4 col-sm-6">
+							<div class="product-item">
+								<div class="pi-pic">
+									<a href="/transaksi/penjualan/<%=transaksi[i].id%>"><img src="data:image/png;base64,<%=terimaBarang[i]%>" alt=""></a>
+								</div>
+								<div class="pi-text">
+									<p><%=transaksi[i].name%></p>
+								</div>
+							</div>
+						</div>
+						<%}%>
+						
+						<div class="text-center w-100 pt-3">
+							<button class="site-btn sb-line sb-dark mb-3">LOAD MORE</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- Category section end -->
+
+	<% include ./partials/footer %>
