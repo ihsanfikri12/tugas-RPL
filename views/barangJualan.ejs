@@ -1,0 +1,54 @@
+<% include ./partials/header %> 
+
+	<!-- Page info -->
+	<div class="page-top-info">
+		<div class="container">
+			<h4>Barang yang kamu jual</h4>
+			<div class="site-pagination">
+				<p>Untuk jual barang 
+				<a style="color:red" href="/barang2/jualan/create">Klik Disini</a> </p>
+			</div>
+		</div>
+	</div>
+	<!-- Page info end -->
+
+
+	<!-- Category section -->
+				<div class="container">
+				<div class="col-lg-9  order-1 order-lg-2 mb-5 ml-5 mb-lg-0">
+					<div class="row">
+						<%for(let i = 0; i<angka; i++) { %>
+						<div class="col-lg-4 col-sm-6">
+							<div class="product-item">
+								<div class="pi-pic">
+									<div class="tag-sale">ON SALE</div>
+									<a href="/barang2/<%=barang2[i].id%>"><img src="data:image/png;base64,<%=terimaBarang[i]%>" alt=""></a>
+									<div class="pi-links">
+										<form action="/barang2/<%=barang2[i].id%>/edit" method="GET">
+										<button class="btn-info"><i class="flaticon-bag"></i><span>Edit</span></button>
+										</form>
+										<form action="/barang2/<%=barang2[i].id%>?_method=DELETE" method="POST">
+										<button class="btn-info mt-2"><i class="flaticon-bag"></i><span>Delete</span></button>
+										</form>
+									</div>
+								</div>
+								<div class="pi-text">
+									<h6><%=barang2[i].harga%></h6>
+									<p><%=barang2[i].name%></p>
+								</div>
+							</div>
+						</div>
+						<%}%>
+						
+						<div class="text-center w-100 pt-3">
+							<button class="site-btn sb-line sb-dark mb-3">LOAD MORE</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- Category section end -->
+
+	<% include ./partials/footer %>

@@ -1,0 +1,39 @@
+{
+  "name": "tugas-rpl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd  -f ./config/dev.env nodemon src/index.js",
+    "test": "env-cmd ./config/test/env jest --watch"
+  },
+  "jest": {
+    "testEnvirontment": "node"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-busboy": "0.0.2",
+    "ejs": "^2.6.2",
+    "env": "0.0.2",
+    "env-cmd": "^9.0.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.5",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.16.2",
+    "hbs": "^4.0.4",
+    "jest": "^24.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.6.3",
+    "multer": "^1.4.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "path": "^0.12.7",
+    "sharp": "^0.22.1",
+    "validator": "^11.1.0"
+  }
+}
