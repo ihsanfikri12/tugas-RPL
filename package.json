@@ -20,7 +20,7 @@
     "env": "0.0.2",
     "env-cmd": "^9.0.3",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.5",
+    "express-fileupload": "^1.1.9",
     "express-formidable": "^1.2.0",
     "express-session": "^1.16.2",
     "hbs": "^4.0.4",
